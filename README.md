@@ -8,7 +8,7 @@ Using historical sales, vehicle attributes, competitor information, and macroeco
 
 Primary Question
 
-What drives automobile demand across European markets?
+How can an automotive manufacturer use demand estimation to support pricing decisions across European markets?
 
 Supporting Questions
 How sensitive is demand to price changes?
