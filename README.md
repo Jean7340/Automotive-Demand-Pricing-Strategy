@@ -1,209 +1,163 @@
-# 🚗 Automotive Demand & Pricing Strategy
+# 🚗 Automotive Demand, Pricing & Competitive Strategy
 
-> Estimating demand and translating pricing analytics into pricing decisions using panel data from the European automotive market.
-
----
-
-![Workflow](figures/workflow.png)
+> A business analytics project that estimates vehicle demand, evaluates price elasticity, analyzes competitive dynamics, and develops executive pricing recommendations for the European automotive market.
 
 ---
 
-# Project Overview
+## Business Problem
 
-Pricing decisions are among the most important strategic levers in the automotive industry.
+Pricing is one of the most important strategic decisions in the automotive industry.
 
-However, increasing prices does not always increase revenue. Manufacturers must understand:
+This project addresses three key business questions:
 
-- How sensitive customers are to price
-- Which product attributes drive demand
-- How competitors influence purchasing decisions
-- What pricing strategy maximizes revenue
+- How sensitive is vehicle demand to price?
+- How do competitors influence pricing power?
+- What pricing strategy should management adopt?
 
-This project develops an end-to-end pricing analytics workflow using panel data covering the European automobile market.
-
----
-
-# Business Questions
-
-This project answers five business questions.
-
-1. What factors drive vehicle demand?
-
-2. How price-sensitive is the market?
-
-3. How does competition affect demand?
-
-4. What happens if prices change?
-
-5. What pricing strategy should management adopt?
-
----
-
-# Dataset
-
-European Automobile Market
-
-Observation level
-
-Vehicle × Market × Year
-
-11,431 observations
-
-54 variables
-
-Main information includes
-
-- Product attributes
-- Vehicle prices
-- Competitor information
-- Macroeconomic indicators
-- Vehicle sales
+Using econometric demand modeling and business analytics, this project translates data into actionable pricing recommendations.
 
 ---
 
 # Analytical Workflow
 
-Business Understanding
-
-↓
-
-Market Understanding
-
-↓
-
-Demand Estimation
-
-↓
-
-Elasticity Analysis
-
-↓
-
-Pricing Simulation
-
-↓
-
-Management Recommendation
-
----
-
-# Executive Dashboard
-
-(这里放最终Dashboard图片)
+```text
+Raw Vehicle Data
+        │
+        ▼
+01 Data Audit
+        │
+        ▼
+02 Market Overview
+        │
+        ▼
+03 Demand Estimation
+        │
+        ▼
+04 Price Elasticity Analysis
+        │
+        ▼
+05 Competitive Dynamics
+        │
+        ▼
+06 Executive Pricing Strategy
+```
 
 ---
 
 # Key Findings
 
-## Finding 1
+### Demand
 
-Vehicle demand is price elastic.
+- Estimated price elasticity ≈ **-1.37**
+- Vehicle demand is highly price-sensitive.
 
-Estimated price elasticity:
+### Competition
 
-**-1.37**
+- Higher competitor prices are associated with higher expected demand.
+- Competition intensity influences pricing power, although the number of competitors alone has limited explanatory power after controlling for product and market characteristics.
 
-This implies that a 1% increase in price is associated with approximately a 1.37% decrease in demand.
+### Revenue
 
----
+- Broad price increases are unlikely to maximize revenue.
+- Moderate price reductions may improve revenue under the estimated elasticity.
 
-## Finding 2
+### Executive Recommendation
 
-Broad price increases reduce revenue.
+Rather than applying a uniform pricing strategy across the portfolio:
 
-Pricing simulation suggests that:
-
-| Price Change | Revenue Change |
-|--------------|---------------|
-| -10% | +2.3% |
-| -5% | +1.5% |
-| +5% | -2.2% |
-| +10% | -5.1% |
-
----
-
-## Finding 3
-
-Competition matters.
-
-Relative competitive positioning significantly influences demand, while simply having more competitors does not necessarily reduce sales after controlling for other factors.
-
----
-
-# Business Recommendations
-
-Based on the estimated demand model,
-
-✓ Avoid broad portfolio-wide price increases.
-
-✓ Evaluate targeted promotional pricing.
-
-✓ Continuously monitor competitor pricing.
-
-✓ Differentiate pricing across market segments.
+- Maintain prices in highly competitive segments.
+- Consider selective price increases for differentiated or premium products.
+- Use demand elasticity and competitive positioning together when making pricing decisions.
 
 ---
 
 # Repository Structure
 
+```text
+automotive-demand-pricing-strategy/
+
+│
+├── data/
+│   ├── cars.csv
+│   └── variables.xlsx
+│
+├── notebooks/
+│   ├── 01_data_audit.ipynb
+│   ├── 02_market_overview.ipynb
+│   ├── 03_demand_estimation.ipynb
+│   ├── 04_price_elasticity.ipynb
+│   ├── 05_competitive_dynamics.ipynb
+│   └── 06_executive_pricing_strategy.ipynb
+│
+├── reports/
+│   └── executive_summary.md
+│
+├── images/
+│
+└── README.md
 ```
-notebooks/
 
-01_data_audit
+---
 
-02_market_understanding
+# Project Overview
 
-03_demand_estimation
+| Notebook | Business Question |
+|----------|-------------------|
+| **01 Data Audit** | Can the dataset support pricing analysis? |
+| **02 Market Overview** | How is the European automotive market structured? |
+| **03 Demand Estimation** | How sensitive is demand to vehicle prices? |
+| **04 Price Elasticity Analysis** | What are the revenue implications of different pricing decisions? |
+| **05 Competitive Dynamics** | How do competitors affect pricing power and demand? |
+| **06 Executive Pricing Strategy** | What pricing strategy should management adopt? |
 
-04_pricing_analysis
+---
 
-05_competition_analysis
+# Methods
 
-06_executive_summary
-```
+This project combines business analytics with econometric modeling.
+
+Analytical techniques include:
+
+- Exploratory Data Analysis (EDA)
+- Demand Estimation (Log-Log OLS)
+- Fixed Effects Modeling
+- Price Elasticity Analysis
+- Competitive Analysis
+- Scenario Simulation
+- Executive Decision Support
+
+---
+
+# Business Recommendations
+
+Based on the analytical results:
+
+- Avoid broad portfolio-wide price increases.
+- Maintain prices in highly competitive markets.
+- Implement selective price increases where competitive pressure is weaker.
+- Estimate segment-level elasticities before introducing dynamic pricing strategies.
+
+---
+
+# Tools
+
+- Python
+- Pandas
+- NumPy
+- Statsmodels
+- Matplotlib
+- Jupyter Notebook
 
 ---
 
 # Skills Demonstrated
 
-- Pricing Analytics
-
-- Econometrics
-
-- Panel Data Modeling
-
-- Demand Estimation
-
 - Business Analytics
-
-- Pricing Strategy
-
+- Pricing Analytics
+- Revenue Optimization
+- Demand Modeling
+- Competitive Analysis
+- Econometric Modeling
 - Executive Communication
-
----
-
-# Tech Stack
-
-Python
-
-Pandas
-
-Statsmodels
-
-NumPy
-
-Matplotlib
-
-Jupyter Notebook
-
----
-
-# Future Improvements
-
-- Customer-level discrete choice model
-
-- Profit optimization
-
-- Dynamic pricing
-
-- Interactive dashboard
+- Data Visualization
+- Strategic Decision Support
