@@ -1,62 +1,187 @@
-# How should a manufacturer price its product portfolio to maximize profit while maintaining market share?
+# Automotive Demand & Pricing Strategy
 
-Business Context
+> Estimating demand and translating pricing analytics into business decisions using panel data from the European automotive market.
 
-A European automotive manufacturer operates across multiple countries and product categories. Management wants to understand which factors drive vehicle demand and whether current pricing strategies are aligned with market conditions.
+---
 
-Using historical sales, vehicle attributes, competitor information, and macroeconomic indicators, this project estimates demand and evaluates pricing opportunities to support strategic decision-making.
+## Project Overview
 
-Primary Question
+Pricing decisions rarely depend on price alone.
 
-How can an automotive manufacturer use demand estimation to support pricing decisions across European markets?
+Manufacturers must understand how demand responds to price, how product attributes influence purchasing decisions, and how competition shapes market outcomes.
 
-Supporting Questions
-How sensitive is demand to price changes?
-Which product attributes contribute most to demand?
-How does the competitive environment influence vehicle sales?
-Which pricing scenarios could improve revenue while remaining competitive?
+This project demonstrates an end-to-end pricing analytics workflow using European automobile market data.
 
-Workflow
+Rather than focusing solely on econometric modeling, the project connects demand estimation with pricing strategy and managerial recommendations.
+
+---
+
+## Business Problem
+
+A European automobile manufacturer wants to answer four questions:
+
+1. What drives vehicle demand?
+2. How price-sensitive are customers?
+3. How does competition affect demand?
+4. How should pricing decisions change under different market conditions?
+
+---
+
+## Dataset
+
+Observation level
+
+Vehicle Model × Country × Year
+
+11,431 observations
+
+54 variables
+
+Main variable groups
+
+- Product Attributes
+- Pricing
+- Competition
+- Macroeconomics
+- Sales
+
+---
+
+## Analytical Workflow
 
 Business Understanding
-        │
-        ▼
-Data Understanding
-        │
-        ▼
-Market Analysis
-        │
-        ▼
-Demand Modeling
-        │
-        ▼
-Pricing Insights
-        │
-        ▼
-Scenario Simulation
-        │
-        ▼
-Executive Recommendation
 
+↓
 
+Market Understanding
 
-automotive-demand-pricing-analytics/
+↓
 
-│
-├── README.md
-│
-├── data/
-│
-│── notebooks/
-│     01_business_understanding.ipynb
-│     02_data_exploration.ipynb
-│     03_demand_modeling.ipynb
-│     04_price_elasticity.ipynb
-│     05_competitive_analysis.ipynb
-│     06_pricing_simulation.ipynb
-│
-├── dashboard/
-│
-├── reports/
-│
-└── images/
+Demand Estimation
+
+↓
+
+Price Elasticity
+
+↓
+
+Pricing Simulation
+
+↓
+
+Business Recommendations
+
+---
+
+## Project Structure
+
+01_data_audit.ipynb
+
+Understand dataset quality and business context.
+
+---
+
+02_market_understanding.ipynb
+
+Analyze the European automobile market.
+
+Business Questions
+
+- Is demand growing?
+- Which manufacturers dominate the market?
+- How is the market segmented?
+
+---
+
+03_demand_estimation.ipynb
+
+Estimate market demand using econometric models.
+
+Topics
+
+- OLS
+- Control Variables
+- Fixed Effects
+- Instrumental Variables
+
+---
+
+04_pricing_analysis.ipynb
+
+Translate econometric results into pricing insights.
+
+Topics
+
+- Price Elasticity
+- Revenue Impact
+- Scenario Analysis
+
+---
+
+05_business_recommendations.ipynb
+
+Provide executive-level pricing recommendations.
+
+Topics
+
+- Pricing implications
+- Competitive considerations
+- Risks and limitations
+
+---
+
+## Key Findings
+
+(To be completed after analysis)
+
+Example
+
+- Vehicle demand is price-sensitive.
+- Product differentiation reduces reliance on price competition.
+- Competitive pricing significantly influences market demand.
+
+---
+
+## Skills Demonstrated
+
+Pricing Analytics
+
+Econometric Modeling
+
+Business Analytics
+
+Panel Data Analysis
+
+Causal Inference
+
+Pricing Strategy
+
+Business Communication
+
+---
+
+## Tech Stack
+
+Python
+
+Pandas
+
+Statsmodels
+
+NumPy
+
+Matplotlib
+
+Jupyter Notebook
+
+---
+
+## Future Extensions
+
+Customer-level choice modeling
+
+Profit optimization
+
+Dynamic pricing
+
+Interactive dashboard
