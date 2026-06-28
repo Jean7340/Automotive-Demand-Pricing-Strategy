@@ -93,7 +93,7 @@ Brand positioning reveals clear differences in pricing and sales volume across m
 
 ### Demand Elasticity
 
-<img src="images/Elasticity%20%26%20Pricing%20Simulation.png" width="320">
+<img src="images/Pricing%20Simulation.png" width="320">
 
 Estimated own-price elasticity of **−1.37** indicates that vehicle demand is highly price-sensitive, making broad price increases unlikely to maximize revenue.
 
